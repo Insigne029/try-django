@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% comment %} <div>
+            <div>
+                <label>Firstname</label>
+                <input type="text" name="firstname">
+            </div>
+            <br>
+            <div>
+                <label>Lastname</label>
+                <input type="text" name="lastname">
+            </div>
+            <br>
+            <div>
+                <label>Username</label>
+                <input type="text" name="username">
+            </div>
+            <br>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <br>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <br>
+            <div>
+                <label>Repeat Password</label>
+                <input type="password" name="repeat-password">
+            </div>
+        </div> {% endcomment %}
+
+        {{ form.as_p }}
+
+        <br>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+{% endblock content %}
